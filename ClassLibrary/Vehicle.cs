@@ -14,12 +14,11 @@ namespace ClassLibrary
         private string registration;
         private string vehicleBrand;
         private string vehicleModel;
-        private int rentalPrice;
+       
 
         public string Registration { get => registration; set => registration = value; }
         public string VehicleBrand { get => vehicleBrand; set => vehicleBrand = value; }
         public string VehicleModel { get => vehicleModel; set => vehicleModel = value; }
-        public int RentalPrice { get => rentalPrice; set => rentalPrice = value; }
 
         public override bool Equals(object obj)
         {
@@ -27,24 +26,22 @@ namespace ClassLibrary
             return vehicle != null &&
                    registration == vehicle.registration &&
                    vehicleBrand == vehicle.vehicleBrand &&
-                   vehicleModel == vehicle.vehicleModel &&
-                   rentalPrice == vehicle.rentalPrice;
+                   vehicleModel == vehicle.vehicleModel;
         }
 
         public override int GetHashCode()
         {
-            var hashCode = 1381312012;
+            var hashCode = 933605804;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(registration);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(vehicleBrand);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(vehicleModel);
-            hashCode = hashCode * -1521134295 + rentalPrice.GetHashCode();
             return hashCode;
         }
 
         public override string ToString()
         {
             return "Vehicle board: " + this.VehicleBrand + "Vehicle model: " + this.VehicleModel + 
-                   " Registration: " + this.Registration + "Rental price: " + this.RentalPrice;
+                   " Registration: " + this.Registration + "Rental price: " + "\n";
         }
     }
 }

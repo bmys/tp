@@ -43,7 +43,7 @@ namespace ClassLibrary
 
         public override string ToString()
         {
-            return "First Name: " + this.FirstName + " Last Name: " + this.LastName + " Pesel: " + this.Pesel + " Age: " + this.Age;
+            return "First Name: " + this.FirstName + " Last Name: " + this.LastName + " Pesel: " + this.Pesel + " Age: " + this.Age + "\n";
         }
 
     }
