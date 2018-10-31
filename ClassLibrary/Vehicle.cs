@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization; // references 
 
 /// <summary>
 /// Class vehicle represents vehicle in the rental
 /// </summary>
 namespace ClassLibrary
 {
+    [DataContract]
+    [Serializable]
     public class Vehicle
     {
         private string registration;
         private string vehicleBrand;
         private string vehicleModel;
-       
 
+        [DataMember()]
         public string Registration { get => registration; set => registration = value; }
+        [DataMember()]
         public string VehicleBrand { get => vehicleBrand; set => vehicleBrand = value; }
+        [DataMember()]
         public string VehicleModel { get => vehicleModel; set => vehicleModel = value; }
 
         public override bool Equals(object obj)

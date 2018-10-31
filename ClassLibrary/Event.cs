@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 /// <summary>
 /// Event describes the relations binding persons and occurrences referring to dictionary positions
 /// </summary>
 namespace ClassLibrary
 {
+    [DataContract]
+    [Serializable]
     public class Event
     {
         private Client client;
@@ -16,9 +19,13 @@ namespace ClassLibrary
         private DateTimeOffset rentalOfDate;
         private DateTimeOffset returnOfDate;
 
+        [DataMember()]
         public Client Client { get => client; set => client = value; }
+        [DataMember()]
         public DateTimeOffset RentalOfDate { get => rentalOfDate; set => rentalOfDate = value; }
+        [DataMember()]
         public DateTimeOffset ReturnOfDate { get => returnOfDate; set => returnOfDate = value; }
+        [DataMember()]
         internal VehicleState VehicleState { get => vehicleState; set => vehicleState = value; }
 
         public override bool Equals(object obj)

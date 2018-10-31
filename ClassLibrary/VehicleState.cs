@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization; // references 
 
 /// <summary>
 /// Class VehicleState description the condition of the vehicle
 /// </summary>
 namespace ClassLibrary
 {
+    [DataContract]
+    [Serializable]
     public class VehicleState
     {
         private Vehicle vehicle;
         private DateTimeOffset rentalPrice;
         private bool avaiable;
 
+        [DataMember()]
         public DateTimeOffset RentalPrice { get => rentalPrice; set => rentalPrice = value; }
+        [DataMember()]
         public bool Avaiable { get => avaiable; set => avaiable = value; }
-        internal Vehicle Vehicle { get => vehicle; set => vehicle = value; }
+        [DataMember()]
+        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
 
         public override bool Equals(object obj)
         {
