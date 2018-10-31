@@ -10,7 +10,7 @@ using System.Runtime.Serialization; // references
 /// </summary>
 namespace ClassLibrary
 {
-    [DataContract]
+    [DataContract()]
     [Serializable]
     public class Vehicle
     {
@@ -44,9 +44,9 @@ namespace ClassLibrary
         }
 
         public override string ToString()
-        {
-            return "Vehicle board: " + this.VehicleBrand + "Vehicle model: " + this.VehicleModel + 
-                   " Registration: " + this.Registration + "Rental price: " + "\n";
+        {            
+            return "Vehicle board: " + this.VehicleBrand + " Vehicle model: " + this.VehicleModel + 
+                   " Registration: " + this.Registration;
         }
     }
 }

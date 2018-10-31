@@ -13,6 +13,24 @@ namespace Zadanie1
     {
         static void Main(string[] args)
         {
+
+            DataFiller dataFiller = new WypelnianieStalymi();
+          
+
+            DataContext dataContext = new DataContext();
+
+            DataRepository dataRepository = new DataRepository(dataFiller)
+            {
+                DataContext = dataContext
+            };
+            dataRepository.Fill();
+           
+          
+           
+
+           // dataFiller.Fill(ref dataContext);
+
+            Console.ReadKey();
         }
     }
 }

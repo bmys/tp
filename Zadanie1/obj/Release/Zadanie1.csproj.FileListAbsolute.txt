@@ -1,0 +1,9 @@
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\bin\Release\Zadanie1.exe.config
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\bin\Release\Zadanie1.exe
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\bin\Release\Zadanie1.pdb
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\bin\Release\ClassLibrary.dll
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\bin\Release\ClassLibrary.pdb
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Release\Zadanie1.csprojResolveAssemblyReference.cache
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Release\Zadanie1.csproj.CoreCompileInputs.cache
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Release\Zadanie1.exe
+E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Release\Zadanie1.pdb

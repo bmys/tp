@@ -10,7 +10,7 @@ using System.Runtime.Serialization;
 /// </summary>
 namespace ClassLibrary
 {
-    [DataContract]
+    [DataContract()]
     [Serializable]
     public class Event
     {
@@ -26,7 +26,7 @@ namespace ClassLibrary
         [DataMember()]
         public DateTimeOffset ReturnOfDate { get => returnOfDate; set => returnOfDate = value; }
         [DataMember()]
-        internal VehicleState VehicleState { get => vehicleState; set => vehicleState = value; }
+        public VehicleState VehicleState { get => vehicleState; set => vehicleState = value; }
 
         public override bool Equals(object obj)
         {
@@ -50,8 +50,9 @@ namespace ClassLibrary
 
         public override string ToString()
         {
-            return this.Client + "\n" + this.VehicleState + " Rental of date: " + this.RentalOfDate + 
+            return "Wypozyczenia dokonal: " + this.Client + "" + this.VehicleState + "Rental of date: " + this.RentalOfDate + 
                    " Return of date: " + this.ReturnOfDate + "\n"; 
         }
+
     }
 }

@@ -1,0 +1,6 @@
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\bin\Debug\ClassLibrary.dll
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\bin\Debug\ClassLibrary.pdb
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\obj\Debug\ClassLibrary.dll
+E:\TechnologieProgramowania\Zadanie1\ClassLibrary\obj\Debug\ClassLibrary.pdb

@@ -15,6 +15,6 @@ namespace Zadanie1
          * Przekazywanie poprzez odwołanie powoduje, że każda zmiana argumentu
          * w metodzie wywoływanej jest odzwierciedlana w wywoływania metody.
          */
-        public abstract void Fill(ref DataContext dataContext);
+        public abstract void Fill(DataContext dataContext);
     }
 }

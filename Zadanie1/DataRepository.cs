@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Zadanie1
 {
-    class DataRepository
+    public class DataRepository
     {
         private DataContext dataContext;
         private DataFiller filler;
@@ -23,12 +23,13 @@ namespace Zadanie1
             
         }
 
-        public DataContext DataContext { get => dataContext; set => dataContext = value; }
-        public DataFiller Filler { get => filler; set => filler = value; }
+        public DataContext DataContext {set => dataContext = value; }
+        //public DataFiller Filler { get => filler; set => filler = value; }
 
         public void Fill()
         {
-            filler.Fill(ref dataContext);
+            filler.Fill(dataContext);
         }
+
     }
 }

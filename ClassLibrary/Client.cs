@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization; // references 
 
-
 /// <summary>
 /// Class client represents people who rent vehicle
 /// </summary>
 namespace ClassLibrary
 {
-    [DataContract]
+    [DataContract()]
     [Serializable]
     public class Client
     {
