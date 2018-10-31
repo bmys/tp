@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace ClassLibrary
 {
-    class Event
+    public class Event
     {
         private Client client;
         private VehicleState vehicleState;

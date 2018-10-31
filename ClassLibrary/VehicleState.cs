@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace ClassLibrary
 {
-    class VehicleState
+    public class VehicleState
     {
         private Vehicle vehicle;
         private DateTimeOffset rentalPrice;

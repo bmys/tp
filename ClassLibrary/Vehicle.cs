@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 /// </summary>
 namespace ClassLibrary
 {
-    class Vehicle
+    public class Vehicle
     {
         private string registration;
         private string vehicleBrand;
