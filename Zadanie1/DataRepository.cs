@@ -183,7 +183,43 @@ namespace Zadanie1
             Event events = new Event();
             return events = dataContext.obsColEvents.Single(oElement => oElement.Client == client);
         }
-    
 
+        public Event GetEvent(VehicleState vehicleState)
+        {
+            Event events = new Event();
+            return events = dataContext.obsColEvents.Single(oElem => oElem.VehicleState == vehicleState);
+        }
+
+        public ObservableCollection<Event> GetAllEvent()
+        {
+            return dataContext.obsColEvents;
+        }
+    
+        public void UpdateEvent(Event newEvents, Event oldEvent)
+        {
+            var client = oldEvent.Client;
+            oldEvent.Client = newEvents.Client;
+            oldEvent.VehicleState = newEvents.VehicleState;
+            oldEvent.RentalOfDate = newEvents.RentalOfDate;
+            oldEvent.ReturnOfDate = newEvents.ReturnOfDate;
+
+            DeleteEvent(client);
+            dataContext.obsColEvents.Add(oldEvent);
+        }
+
+        public void DeleteEvent(Client client)
+        {
+            dataContext.obsColEvents.Remove(GetEvent(client));
+        }
+
+        public void DeleteEvent(Event events)
+        {
+            dataContext.obsColEvents.Remove(events);
+        }
+
+        public void DeleteEvent(VehicleState vehicleState)
+        {
+            dataContext.obsColEvents.Remove(GetEvent(vehicleState));
+        }
     }
 }
