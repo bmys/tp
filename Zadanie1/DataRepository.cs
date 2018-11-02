@@ -44,7 +44,7 @@ namespace Zadanie1
             
         }
 
-        public IEnumerable<Vehicle> GetAllVehicle()
+        public IEnumerable<Vehicle> GetAllVehicleEnumerable()
         {
             return dataContext.dictionaryVehicles.Values;
         }
@@ -89,7 +89,7 @@ namespace Zadanie1
             return client;
         }
 
-        public IEnumerable<Client> GetAllCLients()
+        public IEnumerable<Client> GetAllCLientsEnumerable()
         {
             return dataContext.listClients;
         }
@@ -191,6 +191,11 @@ namespace Zadanie1
         }
 
         public ObservableCollection<Event> GetAllEvent()
+        {
+            return dataContext.obsColEvents;
+        }
+
+        public IEnumerable<Event> GetAllEventEnumerable()
         {
             return dataContext.obsColEvents;
         }
