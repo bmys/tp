@@ -19,7 +19,7 @@ namespace Zadanie1
     [Serializable] // objects of this class can be serialized
     public class DataContext
     {
-        // obsColEvent ToString display all information
+        
         [DataMember()]
         public List<Client> listClients;
         [DataMember()]
@@ -37,38 +37,6 @@ namespace Zadanie1
             this.obsColEvents = new ObservableCollection<Event>();
             this.listVehicleStates = new List<VehicleState>();
             obsColEvents.CollectionChanged += OnCollectionChanged;
-
-
-            //CollectioChanged Occurs when an element is added, removed, changed,
-            //CollectionChanged is event, show F12
-
-            //obsColEvents.CollectionChanged += (sender, e) =>
-            //{
-
-            //    if (e.Action == NotifyCollectionChangedAction.Add)
-            //    {
-            //        Console.WriteLine("Dodano nowy obiekt do kolekcji ObservableCollection");
-            //        foreach (Event ev in e.NewItems)
-            //        {
-
-            //            Console.WriteLine(ev);
-
-            //        }
-
-            //    }
-            //    else
-            //    {
-            //        if (e.Action == NotifyCollectionChangedAction.Remove)
-            //        {
-            //            Console.WriteLine("Usunieto obiekt z kolekcji ObservableCollection");
-            //            foreach (Event ev in e.OldItems)
-            //            {
-            //                Console.WriteLine(ev);
-            //            }
-            //        }
-            //    }
-            //};
-
 
         }
  

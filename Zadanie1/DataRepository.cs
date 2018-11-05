@@ -13,7 +13,7 @@ namespace Zadanie1
         private DataContext dataContext;
         private DataFiller filler;
 
-        //Constructor injection
+       
         /// <summary>
         /// Constructor set CollectionFilleAbstract, Constructor injection
         /// </summary>
@@ -24,7 +24,9 @@ namespace Zadanie1
         }
 
         public DataContext DataContext {set => dataContext = value; }
-  
+        /// <summary>
+        /// Załadowanie naszych danych
+        /// </summary>
         public void Fill()
         {
             filler.Fill(dataContext);
@@ -32,22 +34,21 @@ namespace Zadanie1
 
 
         // implementation method C.R.U.D for vehicle
-
         public void AddVehicle(Vehicle vehicle)
         {
             dataContext.dictionaryVehicles.Add(vehicle.Registration, vehicle);
-        }
+        } //diagram
 
         public Vehicle GetVehicle(string rejestracja)
         {
             return dataContext.dictionaryVehicles[rejestracja];
             
-        }
+        }//diagram
 
         public IEnumerable<Vehicle> GetAllVehicleEnumerable()
         {
             return dataContext.dictionaryVehicles.Values;
-        }
+        }//diagram
 
         public Dictionary<string,Vehicle> GetAllVehicleDictionary()
         {
@@ -57,14 +58,19 @@ namespace Zadanie1
         public void UpdateVehicle(Vehicle oldVehicle, Vehicle newVehicle)
         {
             var rejestracja = oldVehicle.Registration;
-            oldVehicle.Registration = newVehicle.Registration;
-            oldVehicle.VehicleBrand = newVehicle.VehicleBrand;
-            oldVehicle.VehicleModel = newVehicle.VehicleModel;
+            if (newVehicle.Registration == null) { oldVehicle.Registration = oldVehicle.Registration; }
+            else { oldVehicle.Registration = newVehicle.Registration; }
+
+            if (newVehicle.VehicleBrand == null) { oldVehicle.VehicleBrand = oldVehicle.VehicleBrand; }
+            else { oldVehicle.VehicleBrand = newVehicle.VehicleBrand; }
+
+            if (newVehicle.VehicleModel == null) { oldVehicle.VehicleModel = oldVehicle.VehicleModel; }
+            else { oldVehicle.VehicleModel = newVehicle.VehicleModel; }
 
          
             DeleteVehicle(rejestracja);
             dataContext.dictionaryVehicles.Add(oldVehicle.Registration, oldVehicle);
-        }
+        }//diagram
 
         public void DeleteVehicle(string rejestracja)
         {
@@ -74,13 +80,14 @@ namespace Zadanie1
         public void DeleteVehicle(Vehicle vehicle)
         {
             dataContext.dictionaryVehicles.Remove(vehicle.Registration);
-        }
+        } //diagram
+
 
         //implementation C.R.U.D for CLient
         public void AddClient(Client client)
         {
             dataContext.listClients.Add(client);
-        }
+        }//diagram
 
         public Client GetClient(string pesel)
         {
@@ -89,10 +96,15 @@ namespace Zadanie1
             return client;
         }
 
+        public Client GetClient(int index)
+        {
+            return dataContext.listClients[index];
+        }  // diagram
+
         public IEnumerable<Client> GetAllCLientsEnumerable()
         {
             return dataContext.listClients;
-        }
+        }//diagram
 
         public List<Client> GetAllCLientsList()
         {
@@ -103,16 +115,23 @@ namespace Zadanie1
         {
 
             var pesel = oldCLient.Pesel;
-            oldCLient.Pesel = newClient.Pesel;
-            oldCLient.FirstName = newClient.FirstName;
-            oldCLient.LastName = newClient.LastName;
-            oldCLient.Age = newClient.Age;
+            if (newClient.Pesel == null) { oldCLient.Pesel = oldCLient.Pesel;}
+            else { oldCLient.Pesel = newClient.Pesel; }
+
+            if (newClient.FirstName == null) { oldCLient.FirstName = oldCLient.FirstName; }
+            else { oldCLient.FirstName = newClient.FirstName; }
+
+            if (newClient.LastName == null) { oldCLient.LastName = oldCLient.LastName; }
+            else { oldCLient.LastName = newClient.LastName; }
+
+            if (newClient.Age == 0) { oldCLient.Age = oldCLient.Age; }
+            else { oldCLient.Age = newClient.Age; }
 
             DeleteClient(pesel);
             dataContext.listClients.Add(oldCLient);
 
 
-        }
+        }//diagram
 
         public void DeleteClient(string pesel)
         {
@@ -124,7 +143,8 @@ namespace Zadanie1
         public void DeleteClient(Client client)
         {
             dataContext.listClients.Remove(client);
-        }
+        }//diagram
+
 
         // Implements methon C.R.U.D for VehicleState
         public void AddVehicleState(VehicleState vehicleState)
@@ -152,8 +172,12 @@ namespace Zadanie1
         public void UpdateVehicleState(VehicleState oldVehicleState, VehicleState newVehicleState)
         {
             var vehicle = newVehicleState.Vehicle;
-            oldVehicleState.Vehicle = newVehicleState.Vehicle;
-            oldVehicleState.RentalPrice = newVehicleState.RentalPrice;
+            if (newVehicleState.Vehicle == null) { oldVehicleState.Vehicle = oldVehicleState.Vehicle; }
+            else { oldVehicleState.Vehicle = newVehicleState.Vehicle; }
+
+            if (newVehicleState.RentalPrice == 0) { oldVehicleState.RentalPrice = oldVehicleState.RentalPrice; }
+            else { oldVehicleState.RentalPrice = newVehicleState.RentalPrice; }
+
             oldVehicleState.Avaiable = newVehicleState.Avaiable;
 
             DeleteVehicleState(vehicle);
@@ -171,8 +195,8 @@ namespace Zadanie1
             dataContext.listVehicleStates.Remove(GetVehicleState(vehicle));
         }
 
-        // implements method C.R.U.D for Event
-        
+
+        // implements method C.R.U.D for Event      
         public void AddEvent(Event events)
         {
             dataContext.obsColEvents.Add(events);
@@ -203,10 +227,18 @@ namespace Zadanie1
         public void UpdateEvent(Event newEvents, Event oldEvent)
         {
             var client = oldEvent.Client;
-            oldEvent.Client = newEvents.Client;
-            oldEvent.VehicleState = newEvents.VehicleState;
-            oldEvent.RentalOfDate = newEvents.RentalOfDate;
-            oldEvent.ReturnOfDate = newEvents.ReturnOfDate;
+
+            if (newEvents.Client == null) { oldEvent.Client = oldEvent.Client; }
+            else { oldEvent.Client = newEvents.Client; }
+
+            if (newEvents.VehicleState == null) { oldEvent.VehicleState = oldEvent.VehicleState; }
+            else { oldEvent.VehicleState = newEvents.VehicleState; }
+
+            if (newEvents.RentalOfDate == null) { oldEvent.RentalOfDate = oldEvent.RentalOfDate; }
+            else { oldEvent.RentalOfDate = newEvents.RentalOfDate; }
+
+            if (newEvents.ReturnOfDate == null) { oldEvent.ReturnOfDate = oldEvent.ReturnOfDate; }
+            else { oldEvent.ReturnOfDate = newEvents.ReturnOfDate; }
 
             DeleteEvent(client);
             dataContext.obsColEvents.Add(oldEvent);

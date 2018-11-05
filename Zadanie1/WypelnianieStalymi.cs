@@ -19,8 +19,6 @@ namespace Zadanie1
             var obsColEvents = dataContext.obsColEvents;
             var listVehicleStates = dataContext.listVehicleStates;
 
-          
-
             Client client1 = new Client()
             {
                 //Set 
@@ -93,7 +91,6 @@ namespace Zadanie1
                 VehicleModel = "A7"
             };
 
-
             Vehicle vehicle4 = new Vehicle()
             {
                 Registration = "EL AF9CS",
@@ -122,16 +119,14 @@ namespace Zadanie1
                 VehicleModel = "RX 8"
             };
 
-        
-
-            dataContext.dictionaryVehicles.Add(vehicle1.Registration, vehicle1);
-            dataContext.dictionaryVehicles.Add(vehicle2.Registration, vehicle2);
-            dataContext.dictionaryVehicles.Add(vehicle3.Registration, vehicle3);
-            dataContext.dictionaryVehicles.Add(vehicle4.Registration, vehicle4);
-            dataContext.dictionaryVehicles.Add(vehicle5.Registration, vehicle5);
-            dataContext.dictionaryVehicles.Add(vehicle6.Registration, vehicle6);
-            dataContext.dictionaryVehicles.Add(vehicle7.Registration, vehicle7);
-
+       
+            dictionaryVehicles.Add(vehicle1.Registration, vehicle1);
+            dictionaryVehicles.Add(vehicle2.Registration, vehicle2);
+            dictionaryVehicles.Add(vehicle3.Registration, vehicle3);
+            dictionaryVehicles.Add(vehicle4.Registration, vehicle4);
+            dictionaryVehicles.Add(vehicle5.Registration, vehicle5);
+            dictionaryVehicles.Add(vehicle6.Registration, vehicle6);
+            dictionaryVehicles.Add(vehicle7.Registration, vehicle7);
 
 
             VehicleState vehicleState1 = new VehicleState()
@@ -234,8 +229,6 @@ namespace Zadanie1
                 RentalOfDate = new DateTimeOffset(2018, 02, 03, 14, 0, 0, new TimeSpan(1, 0, 0)),
                 ReturnOfDate = new DateTimeOffset(2018, 02, 15, 16, 0, 0, new TimeSpan(1, 0, 0))
             };
-
-
 
             obsColEvents.Add(event1);
             obsColEvents.Add(event2);
