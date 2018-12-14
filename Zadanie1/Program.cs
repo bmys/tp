@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary;
+using System.IO;
+using Newtonsoft.Json;
 
 //Mateusz Misiak
 //Bartosz Myśliwiec
@@ -14,7 +16,9 @@ namespace Zadanie1
     {
         static void Main(string[] args)
         {
-            DataFiller dataFiller = new WypelnianieStalymi();      
+            // DataFiller dataFiller = new WypelnianieStalymi();      
+            DataFiller dataFiller = new WypelnianieJson();      
+
             DataContext dataContext = new DataContext();
 
             DataRepository dataRepository = new DataRepository(dataFiller)
@@ -23,7 +27,7 @@ namespace Zadanie1
             };
             dataRepository.Fill();
 
-          
+           // string json = JsonConvert.SerializeObject(dataContext);
             Console.ReadKey();
         }
     }

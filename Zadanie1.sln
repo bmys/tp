@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie1Test", "Zadanie1Test\Zadanie1Test.csproj", "{DB1A044F-F9A4-48D3-9A2F-0246D247FFC0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4477DBE4-89D1-48B0-8A8B-4AE8987732A8}"
+	ProjectSection(SolutionItems) = preProject
+		Zadanie1\WypelnianieJson.cs = Zadanie1\WypelnianieJson.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary;
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 //Add references with namespace ClassLibrary
 
@@ -21,12 +22,19 @@ namespace Zadanie1
     {
         
         [DataMember()]
-        public List<Client> listClients;
+        [JsonProperty("listClients")]
+        public List<Client> listClients { get; set; }
+
         [DataMember()]
+        [JsonProperty("vehicles")]
         public Dictionary<string, Vehicle> dictionaryVehicles;
+
         [DataMember()]
+        [JsonProperty("obsColEvents")]
         public ObservableCollection<Event> obsColEvents;
+
         [DataMember()]
+        [JsonProperty("listVehicleStates")]
         public List<VehicleState> listVehicleStates;
 
 
