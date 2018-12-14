@@ -1,0 +1,224 @@
+{
+  "listClients": [
+    {
+      "Pesel": "96052909880",
+      "FirstName": "Mateusz",
+      "LastName": "Misiak",
+      "Age": 22
+    },
+    {
+      "Pesel": "95081878364",
+      "FirstName": "Bartosz",
+      "LastName": "Myśliwiec",
+      "Age": 23
+    },
+    {
+      "Pesel": "98052978391",
+      "FirstName": "Natalia",
+      "LastName": "Kwiat",
+      "Age": 20
+    },
+    {
+      "Pesel": "91070878328",
+      "FirstName": "Damian",
+      "LastName": "Nowak",
+      "Age": 23
+    },
+    {
+      "Pesel": "86070878328",
+      "FirstName": "Jacek",
+      "LastName": "Kubczak",
+      "Age": 32
+    }
+  ],
+  "dictionaryVehicles": {
+    "ELE 3G78": {
+      "Registration": "ELE 3G78",
+      "VehicleBrand": "BMW",
+      "VehicleModel": "E39"
+    },
+    "ELE T98C": {
+      "Registration": "ELE T98C",
+      "VehicleBrand": "AUDI",
+      "VehicleModel": "A6"
+    },
+    "EL U98C5": {
+      "Registration": "EL U98C5",
+      "VehicleBrand": "AUDI",
+      "VehicleModel": "A7"
+    },
+    "EL AF9CS": {
+      "Registration": "EL AF9CS",
+      "VehicleBrand": "BMW",
+      "VehicleModel": "M8"
+    },
+    "EL KWR8Y": {
+      "Registration": "EL KWR8Y",
+      "VehicleBrand": "Mercenes",
+      "VehicleModel": "AMG C63"
+    },
+    "ELE AADR": {
+      "Registration": "ELE AADR",
+      "VehicleBrand": "Mercenes",
+      "VehicleModel": "AMG CLA"
+    },
+    "WA B68L3": {
+      "Registration": "WA B68L3",
+      "VehicleBrand": "Mazda",
+      "VehicleModel": "RX 8"
+    }
+  },
+  "obsColEvents": [
+    {
+      "Client": {
+        "Pesel": "96052909880",
+        "FirstName": "Mateusz",
+        "LastName": "Misiak",
+        "Age": 22
+      },
+      "RentalOfDate": "2018-04-20T12:00:00+01:00",
+      "ReturnOfDate": "2018-05-20T13:00:00+01:00",
+      "VehicleState": {
+        "Vehicle": {
+          "Registration": "ELE 3G78",
+          "VehicleBrand": "BMW",
+          "VehicleModel": "E39"
+        },
+        "RentalPrice": 400,
+        "Avaiable": true
+      }
+    },
+    {
+      "Client": {
+        "Pesel": "95081878364",
+        "FirstName": "Bartosz",
+        "LastName": "Myśliwiec",
+        "Age": 23
+      },
+      "RentalOfDate": "2018-05-05T11:00:00+01:00",
+      "ReturnOfDate": "2018-06-05T12:00:00+01:00",
+      "VehicleState": {
+        "Vehicle": {
+          "Registration": "ELE T98C",
+          "VehicleBrand": "AUDI",
+          "VehicleModel": "A6"
+        },
+        "RentalPrice": 600,
+        "Avaiable": true
+      }
+    },
+    {
+      "Client": {
+        "Pesel": "98052978391",
+        "FirstName": "Natalia",
+        "LastName": "Kwiat",
+        "Age": 20
+      },
+      "RentalOfDate": "2018-07-15T08:00:00+01:00",
+      "ReturnOfDate": "2018-09-16T10:00:00+01:00",
+      "VehicleState": {
+        "Vehicle": {
+          "Registration": "EL U98C5",
+          "VehicleBrand": "AUDI",
+          "VehicleModel": "A7"
+        },
+        "RentalPrice": 700,
+        "Avaiable": true
+      }
+    },
+    {
+      "Client": {
+        "Pesel": "91070878328",
+        "FirstName": "Damian",
+        "LastName": "Nowak",
+        "Age": 23
+      },
+      "RentalOfDate": "2018-05-28T12:00:00+01:00",
+      "ReturnOfDate": "2018-09-28T13:00:00+01:00",
+      "VehicleState": {
+        "Vehicle": {
+          "Registration": "EL AF9CS",
+          "VehicleBrand": "BMW",
+          "VehicleModel": "M8"
+        },
+        "RentalPrice": 1200,
+        "Avaiable": true
+      }
+    },
+    {
+      "Client": {
+        "Pesel": "86070878328",
+        "FirstName": "Jacek",
+        "LastName": "Kubczak",
+        "Age": 32
+      },
+      "RentalOfDate": "2018-02-03T14:00:00+01:00",
+      "ReturnOfDate": "2018-02-15T16:00:00+01:00",
+      "VehicleState": {
+        "Vehicle": {
+          "Registration": "EL KWR8Y",
+          "VehicleBrand": "Mercenes",
+          "VehicleModel": "AMG C63"
+        },
+        "RentalPrice": 1100,
+        "Avaiable": true
+      }
+    }
+  ],
+  "listVehicleStates": [
+    {
+      "Vehicle": {
+        "Registration": "ELE 3G78",
+        "VehicleBrand": "BMW",
+        "VehicleModel": "E39"
+      },
+      "RentalPrice": 400,
+      "Avaiable": true
+    },
+    {
+      "Vehicle": {
+        "Registration": "ELE T98C",
+        "VehicleBrand": "AUDI",
+        "VehicleModel": "A6"
+      },
+      "RentalPrice": 600,
+      "Avaiable": true
+    },
+    {
+      "Vehicle": {
+        "Registration": "EL U98C5",
+        "VehicleBrand": "AUDI",
+        "VehicleModel": "A7"
+      },
+      "RentalPrice": 700,
+      "Avaiable": true
+    },
+    {
+      "Vehicle": {
+        "Registration": "EL AF9CS",
+        "VehicleBrand": "BMW",
+        "VehicleModel": "M8"
+      },
+      "RentalPrice": 1200,
+      "Avaiable": true
+    },
+    {
+      "Vehicle": {
+        "Registration": "EL KWR8Y",
+        "VehicleBrand": "Mercenes",
+        "VehicleModel": "AMG C63"
+      },
+      "RentalPrice": 1100,
+      "Avaiable": true
+    },
+    {
+      "Vehicle": {
+        "Registration": "WA B68L3",
+        "VehicleBrand": "Mazda",
+        "VehicleModel": "RX 8"
+      },
+      "RentalPrice": 900,
+      "Avaiable": true
+    }
+  ]
+}
