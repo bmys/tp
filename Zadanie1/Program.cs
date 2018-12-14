@@ -17,7 +17,7 @@ namespace Zadanie1
         static void Main(string[] args)
         {
             // DataFiller dataFiller = new WypelnianieStalymi();      
-            DataFiller dataFiller = new WypelnianieJson();      
+            DataFiller dataFiller = new WypelnianieJson("dane.json");      
 
             DataContext dataContext = new DataContext();
 
@@ -27,6 +27,8 @@ namespace Zadanie1
             };
             dataRepository.Fill();
 
+            foreach(var kj in dataRepository.GetAllVehicleEnumerable())
+                System.Console.WriteLine(kj);
            // string json = JsonConvert.SerializeObject(dataContext);
             Console.ReadKey();
         }

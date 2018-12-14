@@ -2,17 +2,18 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Zadanie1;
+using System.Diagnostics;
 namespace Zadanie1Test
 {
     [TestClass]
     public class JsonLoadTest1
     {
-    
+         
 
         [TestMethod]
         public void TestCount()
         {
-            DataFiller dataFiller = new WypelnianieJson();
+            DataFiller dataFiller = new WypelnianieJson("dane.json");
             DataContext dataContext = new DataContext();
             DataRepository dataRepository = new DataRepository(dataFiller)
             {
@@ -28,5 +29,9 @@ namespace Zadanie1Test
 
 
         }
+
+
+
+
     }
 }

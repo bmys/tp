@@ -11,9 +11,17 @@ namespace Zadanie1
 {
     public class WypelnianieJson : DataFiller
     {
+        string fileName;
+      
+        
+        public WypelnianieJson(string file)
+        {
+            fileName = file;
+        }
+
         public override void Fill(DataContext dataContext)
         {
-            using (StreamReader reader = new StreamReader("dane.json"))
+            using (StreamReader reader = new StreamReader(fileName))
             {
                 string jsonString = reader.ReadToEnd();
                 DataItem dataItems = JsonConvert.DeserializeObject<DataItem>(jsonString);
@@ -22,7 +30,6 @@ namespace Zadanie1
                     dataContext.listClients.Add(client);
 
                 foreach (var vehicle in dataItems.dictionaryVehicles)
-                   // dataContext.dictionaryVehicles =  new Dictionary<string, Vehicle> { { vehicle.Key, vehicle.Value } };
                 dataContext.dictionaryVehicles.Add( vehicle.Key, vehicle.Value);
 
                 foreach (VehicleState vehicleState in dataItems.listVehicleStates)
