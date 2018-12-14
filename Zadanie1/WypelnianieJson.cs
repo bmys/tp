@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Zadanie1
 {
-    class WypelnianieJson : DataFiller
+    public class WypelnianieJson : DataFiller
     {
         public override void Fill(DataContext dataContext)
         {
@@ -22,7 +22,8 @@ namespace Zadanie1
                     dataContext.listClients.Add(client);
 
                 foreach (var vehicle in dataItems.dictionaryVehicles)
-                    dataContext.dictionaryVehicles =  new Dictionary<string, Vehicle> { { vehicle.Key, vehicle.Value } };
+                   // dataContext.dictionaryVehicles =  new Dictionary<string, Vehicle> { { vehicle.Key, vehicle.Value } };
+                dataContext.dictionaryVehicles.Add( vehicle.Key, vehicle.Value);
 
                 foreach (VehicleState vehicleState in dataItems.listVehicleStates)
                     dataContext.listVehicleStates.Add(vehicleState);
