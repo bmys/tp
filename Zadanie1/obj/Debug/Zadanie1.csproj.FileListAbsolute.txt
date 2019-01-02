@@ -7,3 +7,7 @@ E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Debug\Zadanie1.csprojResolveAs
 E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Debug\Zadanie1.csproj.CoreCompileInputs.cache
 E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Debug\Zadanie1.exe
 E:\TechnologieProgramowania\Zadanie1\Zadanie1\obj\Debug\Zadanie1.pdb
+C:\Users\Admin\Source\Repos\bmys\tp\Zadanie1\obj\Debug\Zadanie1.csprojAssemblyReference.cache
+C:\Users\Admin\Source\Repos\bmys\tp\Zadanie1\obj\Debug\Zadanie1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\bmys\tp\Zadanie1\obj\Debug\Zadanie1.exe
+C:\Users\Admin\Source\Repos\bmys\tp\Zadanie1\obj\Debug\Zadanie1.pdb
