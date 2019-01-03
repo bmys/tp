@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary;
 using System.IO;
-using Newtonsoft.Json;
 
 //Mateusz Misiak
 //Bartosz Myśliwiec
