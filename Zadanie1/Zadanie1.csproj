@@ -51,13 +51,11 @@
     <Compile Include="DataRepository.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="WypelnianieJson.cs" />
-    <Compile Include="WypelnianieStalymi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="dane.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
